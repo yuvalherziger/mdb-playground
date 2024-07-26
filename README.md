@@ -2,7 +2,7 @@
 
 ## Installation
 
-This project was tested on Node.js versio 22.4.x. You're welcome to try it on any other 
+Note: this project was tested on Node.js versio 22.4.x. 
 
 ```shell
 npm i
@@ -64,7 +64,7 @@ a log entry along the following one:
 }
 ```
 
-Once you finished your migration file (or files), you can apply it in the following way: 
+Once you finished editing your migration file (or files), you can apply it in the following way: 
 
 ```shell
 npm run build-and-migration
