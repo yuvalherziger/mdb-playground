@@ -14,7 +14,7 @@ import { logger } from "../common/logger";
  *       const ix = new Index({
  *         rolling: false, db: "db", collection: "coll", keys: [{ "foo": 1 }]
  *       });
- *       await ix.build();
+ *       await ix.build(client);
  *
  *  Don'ts:
  *   - Avoid changing the file name.
@@ -41,20 +41,17 @@ export class Migration implements IMigration {
                 fields: {
                     author: [
                         { type: "string" },
-                        { type: "autocomplete" },
                         { type: "stringFacet" }
                     ],
                     title: [
                         { type: "string" },
-                        { type: "autocomplete" }
                     ],
                     customer: [
                         { type: "string" },
-                        { type: "autocomplete" },
                         { type: "stringFacet" }
                     ],
                     createdAt: [{ type: "date" }],
-                    tags: [{ type: "string" }, { type: "stringFacet" }],
+                    tags: [{ type: "token" }, { type: "stringFacet" }],
                 }
             }
         };

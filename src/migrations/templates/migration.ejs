@@ -13,7 +13,7 @@ import { MongoClient, ObjectId } from "mongodb";
  *       const ix = new Index({
  *         rolling: false, db: "db", collection: "coll", keys: [{ "foo": 1 }]
  *       });
- *       await ix.build();
+ *       await ix.build(client);
  *
  *  Don'ts:
  *   - Avoid changing the file name.

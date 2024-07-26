@@ -32,7 +32,7 @@ type IndexConfig = {
     db: string,
     collection: string,
     keys: IndexSpecification | IndexSpecification[],
-    options: CreateIndexesOptions
+    options?: CreateIndexesOptions
 }
 
 export class Index {
@@ -75,7 +75,7 @@ export class Index {
             keys: this.config.keys,
             // options: this.options
         };
-        if (Object.keys(this.config.options).length) {
+        if (this.config.options && Object.keys(this.config.options).length) {
             data.options = this.config.options;
         }
 
